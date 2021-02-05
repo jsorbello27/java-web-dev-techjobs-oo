@@ -34,14 +34,19 @@ public class JobTest {
     @Test
     public void testJobConstructorSetsAllFields(){
         assertEquals("Product tester", newJobThree.getName());
-        assertTrue(newJobThree instanceof Job);
+        assertEquals("ACME", newJobThree.getEmployer().toString());
+        assertTrue(newJobThree.getEmployer() instanceof Employer);
+        assertEquals("Desert", newJobThree.getLocation().toString());
+        assertTrue(newJobThree.getLocation() instanceof Location);
+        assertEquals("Quality control", newJobThree.getPositionType().toString());
+        assertTrue(newJobThree.getPositionType() instanceof PositionType);
+        assertEquals("Persistence", newJobThree.getCoreCompetency().toString());
+        assertTrue(newJobThree.getCoreCompetency() instanceof CoreCompetency);
     }
 
     @Test
     public void testJobsForEquality(){
-        Job sameJobOne = new Job("Zoo Keeper", new Employer("Stl Zoo"), new Location("St. Louis"), new PositionType("Handler"), new CoreCompetency("Animal Care"));
-        Job sameJobTwo = new Job("Zoo Keeper", new Employer("Stl Zoo"), new Location("St. Louis"), new PositionType("Handler"), new CoreCompetency("Animal Care"));
-        assertFalse(sameJobOne == sameJobTwo);
+        assertFalse(testIdentical1 == testIdentical2);
     }
 
     @Test
