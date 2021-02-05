@@ -47,6 +47,58 @@ public class Job {
         return Objects.hash(id);
     }
 
+    //toString method
+    public boolean isValid(){
+        return this != null;
+    }
+    public boolean isNameValid(){
+        return this.name != null;
+    }
+
+    public boolean isEmployerValid(){
+        return this.employer != null;
+    }
+    public boolean isLocationValid(){
+        return this.location != null;
+    }
+    public boolean isPositionValid(){
+        return this.positionType != null;
+    }
+    public boolean isCoreCompentencyValid(){
+        return this.coreCompetency != null;
+    }
+
+
+    @Override
+    public String toString() {
+
+        String idLabel = "ID: ";
+        String nameLabel = "name: ";
+        String employerLabel = "employer: ";
+        String locationLabel = "location: ";
+        String positionTypeLabel = "position type: ";
+        String coreCompetencyLabel = "core competency: ";
+        String output = "";
+        if (idLabel == null || nameLabel == null || employerLabel == null || locationLabel == null || positionTypeLabel == null || coreCompetencyLabel == null){
+            output = "Data not available";
+
+        } else if (idLabel != null || nameLabel != null || employerLabel != null || locationLabel != null || positionTypeLabel != null || coreCompetencyLabel != null) {
+            output = idLabel + id + "\n" +
+                    nameLabel + name + "\n" +
+                    employerLabel + employer + "\n" +
+                    locationLabel + location + "\n" +
+                    positionTypeLabel + positionType + "\n" +
+                    coreCompetencyLabel + coreCompetency + "\n";
+
+        }
+        return output;
+
+
+    }
+
+
+
+
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
@@ -94,4 +146,10 @@ public class Job {
     public int getId() {
         return id;
     }
+
+
+
+
+
+
 }
