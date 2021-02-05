@@ -48,51 +48,46 @@ public class Job {
     }
 
     //toString method
-    public boolean isValid(){
-        return this != null;
-    }
-    public boolean isNameValid(){
-        return this.name != null;
-    }
-
-    public boolean isEmployerValid(){
-        return this.employer != null;
-    }
-    public boolean isLocationValid(){
-        return this.location != null;
-    }
-    public boolean isPositionValid(){
-        return this.positionType != null;
-    }
-    public boolean isCoreCompentencyValid(){
-        return this.coreCompetency != null;
-    }
-
 
     @Override
-    public String toString() {
-
-        String idLabel = "ID: ";
-        String nameLabel = "name: ";
-        String employerLabel = "employer: ";
-        String locationLabel = "location: ";
-        String positionTypeLabel = "position type: ";
-        String coreCompetencyLabel = "core competency: ";
-        String output = "";
-        if(idLabel != null && !idLabel.trim().isEmpty() || nameLabel != null && !nameLabel.trim().isEmpty() || employerLabel != null && !employerLabel.trim().isEmpty() || locationLabel != null && !locationLabel.trim().isEmpty() || positionTypeLabel != null && !positionTypeLabel.trim().isEmpty() || coreCompetencyLabel != null && !coreCompetencyLabel.trim().isEmpty()) {
-            output = idLabel + id + "\n" +
-                    nameLabel + name + "\n" +
-                    employerLabel + employer + "\n" +
-                    locationLabel + location + "\n" +
-                    positionTypeLabel + positionType + "\n" +
-                    coreCompetencyLabel + coreCompetency + "\n";
-        }else {
-            output = "Data not available";
+    public String toString(){
+        String aString;
+        if(getName().equals("")){
+            aString = "\n" + "ID: " + getId() + "\n" + "Name: Data not available";
         }
-        return output;
+        else{
+            aString = "\n" + "ID: " + getId() + "\n" + "Name: " + getName();
+        }
+
+        if(getEmployer().getValue().equals("")){
+            aString = aString +"\n" + "Employer: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Employer: " + getEmployer();
+        }
+
+        if(getLocation().getValue().equals("")){
+            aString = aString + "\n" + "Location: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Location: " + getLocation();
+        }
+
+        if(getPositionType().getValue().equals("")){
+            aString = aString + "\n" + "Position Type: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Position Type: " + getPositionType();
+        }
+
+        if(getCoreCompetency().getValue().equals("")){
+            aString = aString + "\n" + "Core Competency: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Core Competency: " + getCoreCompetency() + "\n";
+        }
+        return aString;
     }
-
-
 
 
 

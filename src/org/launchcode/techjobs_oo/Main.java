@@ -8,7 +8,7 @@ public class Main {
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
         Job job3 = new Job("Ice cream taster", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Taste"));
-        Job job4 = new Job("poopie face", null, new Location("Toilet"), new PositionType("Turd Burgler"), new CoreCompetency("#2"));
+        Job job4 = new Job("poopie face", new Employer(""), new Location("Toilet"), new PositionType("Turd Burgler"), new CoreCompetency("#2"));
 
 
 
