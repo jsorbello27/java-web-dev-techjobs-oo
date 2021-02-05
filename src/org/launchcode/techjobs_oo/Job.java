@@ -79,21 +79,17 @@ public class Job {
         String positionTypeLabel = "position type: ";
         String coreCompetencyLabel = "core competency: ";
         String output = "";
-        if (idLabel == null || nameLabel == null || employerLabel == null || locationLabel == null || positionTypeLabel == null || coreCompetencyLabel == null){
-            output = "Data not available";
-
-        } else if (idLabel != null || nameLabel != null || employerLabel != null || locationLabel != null || positionTypeLabel != null || coreCompetencyLabel != null) {
+        if(idLabel != null && !idLabel.trim().isEmpty() || nameLabel != null && !nameLabel.trim().isEmpty() || employerLabel != null && !employerLabel.trim().isEmpty() || locationLabel != null && !locationLabel.trim().isEmpty() || positionTypeLabel != null && !positionTypeLabel.trim().isEmpty() || coreCompetencyLabel != null && !coreCompetencyLabel.trim().isEmpty()) {
             output = idLabel + id + "\n" +
                     nameLabel + name + "\n" +
                     employerLabel + employer + "\n" +
                     locationLabel + location + "\n" +
                     positionTypeLabel + positionType + "\n" +
                     coreCompetencyLabel + coreCompetency + "\n";
-
+        }else {
+            output = "Data not available";
         }
         return output;
-
-
     }
 
 
