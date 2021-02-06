@@ -19,8 +19,8 @@ public class JobTest {
         newJobOne = new Job();
         newJobTwo = new Job();
         newJobThree = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        testIdentical1 = new Job("Analyst", new Employer("Microsoft"), new Location("Webster Groves"), new PositionType("Data"), new CoreCompetency("Detail-Oriented"));
-        testIdentical2 = new Job("Analyst", new Employer("Microsoft"), new Location("Webster Groves"), new PositionType("Data"), new CoreCompetency("Detail-Oriented"));
+        testIdentical1 = new Job("Web Developer", new Employer("Microsoft"), new Location("Potosi"), new PositionType("Code"), new CoreCompetency("Detail-Oriented"));
+        testIdentical2 = new Job("Web Developer", new Employer("Microsoft"), new Location("Potosi"), new PositionType("Code"), new CoreCompetency("Detail-Oriented"));
     }
 
 

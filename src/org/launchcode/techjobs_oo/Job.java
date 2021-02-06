@@ -52,35 +52,35 @@ public class Job {
     @Override
     public String toString(){
         String aString;
-        if(getName().equals("")){
+        if(getName().equals("") || getName() == null){
             aString = "\n" + "ID: " + getId() + "\n" + "Name: Data not available";
         }
         else{
             aString = "\n" + "ID: " + getId() + "\n" + "Name: " + getName();
         }
 
-        if(getEmployer().getValue().equals("")){
+        if(getEmployer().getValue().equals("") || getEmployer().getValue() == null){
             aString = aString +"\n" + "Employer: Data not available";
         }
         else {
             aString = aString + "\n" + "Employer: " + getEmployer();
         }
 
-        if(getLocation().getValue().equals("")){
+        if(getLocation().getValue().equals("") || getLocation().getValue() == null){
             aString = aString + "\n" + "Location: Data not available";
         }
         else {
             aString = aString + "\n" + "Location: " + getLocation();
         }
 
-        if(getPositionType().getValue().equals("")){
+        if(getPositionType().getValue().equals("") || getPositionType().getValue() == null){
             aString = aString + "\n" + "Position Type: Data not available";
         }
         else {
             aString = aString + "\n" + "Position Type: " + getPositionType();
         }
 
-        if(getCoreCompetency().getValue().equals("")){
+        if(getCoreCompetency().getValue().equals("") || getCoreCompetency().getValue() == null){
             aString = aString + "\n" + "Core Competency: Data not available";
         }
         else {
